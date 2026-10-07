@@ -7,13 +7,15 @@ car_data = pd.read_csv('vehicles_us.csv')
 st.title('Visualização de Dados de Anúncios de Carros')
 st.header('Anúncios de venda de carros')
 st.write('Este aplicativo permite que você visualize dados de anúncios de venda de carros.')
+
 hist_button = st.button('Criar histograma')
+
 if hist_button:
-            st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
+    st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
             
-            fig = px.histogram(car_data, x="odometer")
+    fig = px.histogram(car_data, x="odometer")
         
-            st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
 
 if st.button('Criar gráfico de dispersão'):
     st.write('Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
